@@ -3,7 +3,7 @@ services:
   app:
     container_name: laravel-app
     ports:
-      - "8000:8000"
+      - "8088:88"
     build: ./Docker/App
     volumes:
       - ./src:/var/www/html
