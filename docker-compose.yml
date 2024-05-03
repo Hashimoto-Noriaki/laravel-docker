@@ -22,7 +22,7 @@ services:
       - ./Docker/DB/volume:/var/lib/mysql
       - ./Docker/DB/my.cnf:/etc/mysql/conf.d/my.cnf
     ports:
-      - 3306:3306
+      - "13306:3306"
   adminer:
     container_name: adminer
     hostname: adminer
