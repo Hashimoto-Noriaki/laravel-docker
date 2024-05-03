@@ -3,7 +3,7 @@ services:
   app:
     container_name: laravel-app
     ports:
-      - "8080:80"
+      - "8000:8000"
     build: ./Docker/App
     volumes:
       - ./src:/var/www/html
@@ -22,13 +22,13 @@ services:
       - ./Docker/DB/volume:/var/lib/mysql
       - ./Docker/DB/my.cnf:/etc/mysql/conf.d/my.cnf
     ports:
-      - 13306:3306
+      - 3306:3306
   adminer:
     container_name: adminer
     hostname: adminer
     image: adminer:4.7.5
     restart: always
     ports:
-      - 8088:8080
+      - 8080:8080
     depends_on:
       - db
